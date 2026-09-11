@@ -45,7 +45,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "8956223424:AAHy_0kRzPwhdi3G85tnqfnkcNmJ
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "kushal_owner")
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "7130712170"))
 
-MY_UPI_ID = os.environ.get("MY_UPI_ID", "paytmqr5nnug9@ptys")
+MY_UPI_ID = os.environ.get("MY_UPI_ID", "paytm.s20glin@pty")
 MY_UPI_NAME = os.environ.get("MY_UPI_NAME", "Viral MMS Store")
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="Markdown")
