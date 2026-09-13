@@ -41,11 +41,11 @@ def keep_alive():
 # ---------------------------------------------------------
 # BOT & CONFIGURATION
 # ---------------------------------------------------------
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8956223424:AAHy_0kRzPwhdi3G85tnqfnkcNmJe24C8hc")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8618601267:AAFs9jI9kIVK13vQGgrv5egFm-XjNSQBqFc")
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "kushal_owner")
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "7130712170"))
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "123456789"))
 
-MY_UPI_ID = os.environ.get("MY_UPI_ID", "paytm.s20glin@pty")
+MY_UPI_ID = os.environ.get("MY_UPI_ID", "kushal@upi")
 MY_UPI_NAME = os.environ.get("MY_UPI_NAME", "Viral MMS Store")
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="Markdown")
@@ -68,17 +68,11 @@ def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
     
     markup.add(
-        InlineKeyboardButton("💦 𝐑𝐞𝐚𝐥 𝐈𝐧𝐝𝐢𝐚𝐧 𝐃ē𝐬𝐢 𝐏𝐨𝐫𝐧 🫦", callback_data="p1"),
-        InlineKeyboardButton("🌽 CHlL CORN  — ₹79 / 30d", callback_data="p2"),
-        InlineKeyboardButton("✨ C0RE R@PE 3 3 — ₹96 / 30d", callback_data="p3"),
-        InlineKeyboardButton("✨ ALL VIDEO VIP MEMBER ✨ — ₹155 / 30d", callback_data="p4"),
-        InlineKeyboardButton("😋 BHAI BHEN HOT 🥳 — ₹89 / 365d", callback_data="p5"),
-        InlineKeyboardButton("🥵 HOT DESI BHABHI 6 🥵 — ₹111 / 60d", callback_data="p6"),
-        InlineKeyboardButton("😳  INFLUENCER 50%-OFF 7 🥵 — ₹129 / 60d", callback_data="p7"),
-        InlineKeyboardButton("🔞 PAID PACK 🥵 — ₹88 / 30d", callback_data="p8"),
-        InlineKeyboardButton("😍 VVIP PLAN 1 LAKH VIDEO  — ₹277 / 365d", callback_data="p10")
-    )
-    
+        InlineKeyboardButton("😍𝙄𝙉𝘿𝙄𝘼𝙉 𝙍𝘼𝙋𝙀 𝙑𝙀𝘿𝙄𝙊𝙎 🫦", callback_data="p1"),
+        InlineKeyboardButton("❤️ 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉  — ₹79 / 30d", callback_data="p2"),
+        InlineKeyboardButton("✨ 𝙄𝙉𝙎𝙏𝘼 + 𝘾𝙀𝙇𝙀𝘽𝙍𝙄𝙏𝙔 𝙋𝙑𝙏 𝙇𝙀𝘼𝙆𝙎 — ₹96 / 30d", callback_data="p3"),
+        InlineKeyboardButton("✨ 𝗠𝗢𝗡&𝗦𝗢𝗡 + 𝗥𝗔𝗣𝗘 + 𝗗𝗘𝗦𝗜 ✨ — ₹149 / 60d", callback_data="p4"),
+        InlineKeyboardButton("😋 𝘼𝙇𝙇 𝙄𝙉 𝙊𝙉𝙀 🥳 — ₹199 / 199d", callback_data="p5"),
     markup.row(
         InlineKeyboardButton("📖 How to Use", callback_data="how_to_use"),
         InlineKeyboardButton("🚨 Report Issue", callback_data="report_issue")
@@ -88,7 +82,7 @@ def get_main_keyboard():
 def get_product_buy_keyboard(plan_id):
     markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
-        InlineKeyboardButton("💳 Buy Now", callback_data=f"buy_{plan_id}"),
+        InlineKeyboardButton("💳 Buy Now", callback_data=f"buy_{plan_id}"),1
         InlineKeyboardButton("⬅️ Back", callback_data="back")
     )
     return markup
@@ -141,7 +135,7 @@ def send_start_sequence(chat_id, user_name):
         except Exception as e:
             logging.error(f"Start Media Group Error: {e}")
 
-    quality_text = "✨ **TRY OUR ANY PLAN FOR CHECKING THE QUALITY** ✨"
+    quality_text = "👋 𝙃𝙀𝙇𝙇𝙊 , (𝙉𝘼𝙈𝙀)  𝘾𝙃𝙊𝙊𝙎𝙀 𝘼 𝙋𝙇𝘼𝙉 𝙏𝙊 𝙂𝙀𝙏 𝙎𝙏𝘼𝙍𝙏𝙀𝘿 "
     bot.send_message(chat_id, quality_text)
     
     welcome_msg = f"👋 Hello, 🦋💸**{user_name}**!\n\nChoose a plan to get started:"
@@ -544,3 +538,4 @@ if __name__ == '__main__':
         except Exception as e:
             logging.error(f"Polling crash prevented: {e}")
             time.sleep(3)
+            
