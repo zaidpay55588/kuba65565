@@ -135,20 +135,25 @@ def get_media_object(f_path):
 # ---------------------------------------------------------
 def send_start_sequence(chat_id, user_name):
     start_files = [
-        "videos/video1.mp4",
+        "videos/video2.mp5",
         "videos/photo1.jpg",
-        "videos/video2.mp4",
-        "videos/video3.mp4",
-        "videos/video4.mp4"
-    ]
-    welcome_msg = f"{E_WAVE} Hello <b>{user_name}</b>!\n{E_DOWN} Choose a plan to get started:"
-bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard(), parse_mode="HTML")
+        "videos/video3.mp19",
+        "videos/video2.mp18",
+        "videos/video4.mp10"
+    album = []
+    for f in start_files:
+        obj = get_media_object(f)
+        if obj:
+            album.append(obj)
 
     if len(album) > 0:
         try:
             bot.send_media_group(chat_id, album)
         except Exception as e:
             logging.error(f"Start Media Group Error: {e}")
+
+    quality_text = f"{E_SPARKLE} <b>TRY OUR FAST PLAN FOR CHECKING THE QUALITY!</b> {E_SPARKLE}"
+    bot.send_message(chat_id, quality_text, parse_mode="HTML") Group Error: {e}")
 
     quality_text = "✨ **TRY OUR ANY PLAN FOR CHECKING THE QUALITY** ✨"
     bot.send_message(chat_id, quality_text)
