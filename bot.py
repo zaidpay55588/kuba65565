@@ -68,7 +68,7 @@ def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
     
     markup.add(
-        InlineKeyboardButton("💦𝙈𝙊𝙈 & 𝙎𝙊𝙉 𝙑𝙀𝘿𝙄𝙊𝙎 🫦", callback_data="p1"),
+             InlineKeyboardButton("🌽 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹69 / 30d", callback_data="p1"),
         InlineKeyboardButton("🌽 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹79 / 30d", callback_data="p2"),
         InlineKeyboardButton("✨ 𝙄𝙉𝘿𝙄𝘼𝙉 𝙍𝘼𝙋𝙀 𝙑𝙀𝘿𝙄𝙊𝙎  — ₹69 / 30d", callback_data="p3"),
         InlineKeyboardButton("✨ 𝗠𝗢𝗡&𝗦𝗢𝗡 + 𝗥𝗔𝗣𝗘 + 𝗗𝗘𝗦𝗜 ✨ — ₹149 / 60d", callback_data="p4"),
