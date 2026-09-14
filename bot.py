@@ -71,13 +71,11 @@ def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
     
     # 1. URL Buttons -> Automatic Blue/Green Color (Arrow ↗ ke saath)
+    def get_main_keyboard():
+    markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
         InlineKeyboardButton("🎬 WATCH DEMO VIDEO ↗", url="https://t.me/your_channel"),
-        InlineKeyboardButton("💬 CONTACT ADMIN ↗", url="https://t.me/kushal_owner")
-    )
-    
-    # 2. Premium VIP Plans (Regular Action Buttons)
-    markup.add(
+        InlineKeyboardButton("💬 CONTACT ADMIN ↗", url="https://t.me/kushal_owner"),
         InlineKeyboardButton("👑 PREMIUM EXCLUSIVE VIP ⚡", callback_data="p1"),
         InlineKeyboardButton("🔥 DISCOUNT OFFER 🔥", callback_data="p2"),
         InlineKeyboardButton("⚡ SPECIAL VIP PLAN ⚡", callback_data="p3"),
@@ -85,13 +83,7 @@ def get_main_keyboard():
         InlineKeyboardButton("🌟 POPULAR PLAN 🌟", callback_data="p5"),
         InlineKeyboardButton("💎 ULTIMATE VIP PASS 💎", callback_data="p6")
     )
-    
-    # 3. Extra Links / WebApps
     markup.row(
-        InlineKeyboardButton("❓ How to Use", callback_data="how_to_use"),
-        InlineKeyboardButton("🚨 Report Issue", callback_data="report_issue")
-    )
-    return markup
         InlineKeyboardButton("📖 How to Use", callback_data="how_to_use"),
         InlineKeyboardButton("🚨 Report Issue", callback_data="report_issue")
     )
