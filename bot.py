@@ -45,7 +45,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "8869798141:AAG-cfLMMGyYgLuweoSw5an8c7J_
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "kushal_owner")
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "1469172144"))
 
-MY_UPI_ID = os.environ.get("MY_UPI_ID", "kushal@upi")
+MY_UPI_ID = os.environ.get("MY_UPI_ID", "paytm.s3dovkg@pty")
 MY_UPI_NAME = os.environ.get("MY_UPI_NAME", "Viral MMS Store")
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="Markdown")
@@ -69,7 +69,7 @@ def get_main_keyboard():
     
     markup.add(
         InlineKeyboardButton("💦𝙈𝙊𝙈 & 𝙎𝙊𝙉 𝙑𝙀𝘿𝙄𝙊𝙎 🫦", callback_data="p1"),
-        InlineKeyboardButton("🌽 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹79 / 30d", callback_data="p2"),
+        InlineKeyboardButton("😍 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹79 / 30d", callback_data="p2"),
         InlineKeyboardButton("✨ 𝙄𝙉𝘿𝙄𝘼𝙉 𝙍𝘼𝙋𝙀 𝙑𝙀𝘿𝙄𝙊𝙎  — ₹69 / 30d", callback_data="p3"),
         InlineKeyboardButton("✨ 𝗠𝗢𝗡&𝗦𝗢𝗡 + 𝗥𝗔𝗣𝗘 + 𝗗𝗘𝗦𝗜 ✨ — ₹149 / 60d", callback_data="p4"),
         InlineKeyboardButton("😋 𝙄𝙉𝙎𝙏𝘼 + 𝘾𝙀𝙇𝙀𝘽𝙍𝙄𝙏𝙔 𝙋𝙑𝙏 𝙇𝙀𝘼𝙆𝙎🥳 — ₹99 / 30d", callback_data="p5"),
