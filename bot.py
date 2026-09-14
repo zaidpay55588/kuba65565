@@ -141,12 +141,8 @@ def send_start_sequence(chat_id, user_name):
         "videos/video3.mp4",
         "videos/video4.mp4"
     ]
-    
-    album = []
-    for f in start_files:
-        obj = get_media_object(f)
-        if obj:
-            album.append(obj)
+    welcome_msg = f"{E_WAVE} Hello <b>{user_name}</b>!\n{E_DOWN} Choose a plan to get started:"
+bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard(), parse_mode="HTML")
 
     if len(album) > 0:
         try:
