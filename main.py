@@ -68,7 +68,7 @@ def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
     
     markup.add(
-        InlineKeyboardButton("💦𝙈𝙊𝙈 & 𝙎𝙊𝙉 𝙑𝙀𝘿𝙄𝙊𝙎 🫦", callback_data="p1"),
+        InlineKeyboardButton("💦𝙈𝙊𝙈 & 𝙎𝙊𝙉 𝙑𝙀𝘿𝙄𝙊𝙎 🫦", callback_data="p"),
         InlineKeyboardButton("😍 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹79 / 30d", callback_data="p2"),
         InlineKeyboardButton("✨ 𝙄𝙉𝘿𝙄𝘼𝙉 𝙍𝘼𝙋𝙀 𝙑𝙀𝘿𝙄𝙊𝙎  — ₹69 / 30d", callback_data="p3"),
         InlineKeyboardButton("✨ 𝗠𝗢𝗡&𝗦𝗢𝗡 + 𝗥𝗔𝗣𝗘 + 𝗗𝗘𝗦𝗜 ✨ — ₹149 / 60d", callback_data="p4"),
@@ -120,10 +120,10 @@ def get_media_object(f_path):
 # ---------------------------------------------------------
 def send_start_sequence(chat_id, user_name):
     start_files = [
-        "videos/video8.mp4",
-        "videos/photo4.jpg",
-        "videos/video7.mp4",
-        "videos/video6.mp4",
+        "videos/photo14.jpg",
+        "videos/photo18.jpg",
+        "videos/photo15.jpg",
+        "videos/video4.mp4",
         "videos/video5.mp4"
     ]
     
@@ -242,7 +242,7 @@ def send_payment_qr(chat_id, plan_info):
 # UNIQUE PLAN DETAILS
 # ---------------------------------------------------------
 sections = {
-    "p18": {
+    "p2": {
         "name": "💦 𝐑𝐞𝐚𝐥 𝐈𝐧𝐝!𝐚𝐧 𝐃ē𝐬𝐢 𝐏𝟎𝐫𝐧 🫦", 
         "price": "69", 
         "validity": "30 Days",
@@ -254,7 +254,7 @@ sections = {
         ),
         "media": ["videos/video1.mp4", "videos/video2.mp4"] 
     },
-    "p9": {
+    "p": {
         "name": "🤩 𝐇𝐎𝐓 𝐃𝐄𝐒𝐈 𝐕𝐈𝐏 𝐏𝐀𝐂𝐊 🤤", 
         "price": "79", 
         "validity": "30 Days",
@@ -278,7 +278,7 @@ sections = {
         ),
         "media": ["videos/video4.mp4", "videos/video5.mp4", "videos/video8.mp4"]
     },
-    "p4": {
+    "p3": {
         "name": "💋 𝐒𝐏𝐄𝐂𝐈𝐀🇱 𝐃𝐈𝐒𝐂𝐎𝐔𝐍𝐓 𝐎𝐅𝐅𝐄𝐑 🎉", 
         "price": "199", 
         "validity": "30 Days",
@@ -290,7 +290,7 @@ sections = {
         ),
         "media": ["videos/video7.mp4", "videos/video8.mp4", "videos/photo18.jpg"]
     },
-    "p5": {
+    "p4": {
         "name": "🥳 𝟏-𝐘𝐄𝐀𝐑 𝐔𝐍𝐋𝐈𝐌𝐈𝐓𝐄𝐃 𝐏𝐀𝐒𝐒 🥳", 
         "price": "99", 
         "validity": "30 Days",
@@ -302,7 +302,7 @@ sections = {
         ),
         "media": ["videos/photo4.jpg", "videos/photo5.jpg", "videos/video4.mp4"]
     },
-    "p6": {
+    "p5": {
         "name": "🥵 𝟔𝟎 𝐃𝐀𝐘𝐒 𝐌𝐄𝐆𝐀 𝐕𝐈𝐏 🥵", 
         "price": "149", 
         "validity": "60 Days",
@@ -314,7 +314,7 @@ sections = {
         ),
         "media": ["videos/video2.mp4", "videos/video3.mp4", "videos/photo17.jpg"]
     },
-    "p7": {
+    "p2": {
         "name": "😳 𝐈𝐍𝐅𝐋𝐔𝐄𝐍𝐂𝐄𝐑 𝟓𝟎% 𝐎𝐅𝐅 🥵", 
         "price": "199", 
         "validity": "999 Days",
