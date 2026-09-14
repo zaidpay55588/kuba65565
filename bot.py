@@ -82,37 +82,30 @@ except Exception as e:
 def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
     
+def get_main_keyboard():
+    markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
-             InlineKeyboardButton("💦𝙈𝙊𝙈 & 𝙎𝙊𝙉 𝙑𝙀𝘿𝙄𝙊𝙎 🫦 — ₹69 / 30d", callback_data="p1"),
-        InlineKeyboardButton("❤️ 𝘾𝙃𝙄𝙇𝘿 𝙋𝙊𝙍𝙉 — ₹79 / 30d", callback_data="p2"),
-        InlineKeyboardButton("✨ 𝙄𝙉𝘿𝙄𝘼𝙉 𝙍𝘼𝙋𝙀 𝙑𝙀𝘿𝙄𝙊𝙎  — ₹69 / 30d", callback_data="p3"),
-        InlineKeyboardButton("✨ 𝗠𝗢𝗡&𝗦𝗢𝗡 + 𝗥𝗔𝗣𝗘 + 𝗗𝗘𝗦𝗜 ✨ — ₹149 / 60d", callback_data="p4"),
-        InlineKeyboardButton("😋 𝙄𝙉𝙎𝙏𝘼 + 𝘾𝙀𝙇𝙀𝘽𝙍𝙄𝙏𝙔 𝙋𝙑𝙏 𝙇𝙀𝘼𝙆𝙎🥳 — ₹99 / 30d", callback_data="p5"),
-        InlineKeyboardButton("🥵 100+ 𝙂𝙍𝙊𝙐𝙋𝙎 + 1000𝙆 𝙑𝙀𝘿𝙄𝙊𝙎 🥵 — ₹249 / 999d", callback_data="p6"),
-        InlineKeyboardButton("😳  𝘼𝙇𝙇 𝙄𝙉 𝙊𝙉𝙀  🥵 — ₹199 / 30d", callback_data="p7"),
+        InlineKeyboardButton("👑 PREMIUM EXCLUSIVE VIP ⚡", callback_data="p1"),
+        InlineKeyboardButton("🔥 DISCOUNT OFFER 🔥", callback_data="p2"),
+        InlineKeyboardButton("⚡ SPECIAL VIP PLAN ⚡", callback_data="p3"),
+        InlineKeyboardButton("🚀 STARTER PACK 🚀", callback_data="p4"),
+        InlineKeyboardButton("🌟 POPULAR PLAN 🌟", callback_data="p5"),
+        InlineKeyboardButton("💎 ULTIMATE VIP PASS 💎", callback_data="p6")
     )
-    
     markup.row(
-        InlineKeyboardButton("📖 How to Use", callback_data="how_to_use"),
+        InlineKeyboardButton("❓ How to Use", callback_data="how_to_use"),
         InlineKeyboardButton("🚨 Report Issue", callback_data="report_issue")
     )
     return markup
+
 
 def get_product_buy_keyboard(plan_id):
     markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
         InlineKeyboardButton("💳 Buy Now", callback_data=f"buy_{plan_id}"),
-        InlineKeyboardButton("⬅️ Back", callback_data="back")
+        InlineKeyboardButton("🔙 Back", callback_data="back")
     )
     return markup
-
-def get_admin_approval_keyboard(user_id, txn_id):
-    markup = InlineKeyboardMarkup(row_width=2)
-    markup.add(
-        InlineKeyboardButton("✅ Verify Payment", callback_data=f"adm_approve_{user_id}_{txn_id}"),
-        InlineKeyboardButton("❌ Cancel Payment", callback_data=f"adm_reject_{user_id}_{txn_id}")
-def send_start_sequence(chat_id, username):
-    start_files = [
         'videos/video1.mp4',
         'videos/photo1.jpg',
         'videos/video2.mp4',
