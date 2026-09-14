@@ -43,7 +43,7 @@ def keep_alive():
 # ---------------------------------------------------------
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8869798141:AAG-cfLMMGyYgLuweoSw5an8c7J_ey3_YTc")
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "kushal_owner")
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "123456789"))
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "1469172144"))
 
 MY_UPI_ID = os.environ.get("MY_UPI_ID", "kushal@upi")
 MY_UPI_NAME = os.environ.get("MY_UPI_NAME", "Viral MMS Store")
