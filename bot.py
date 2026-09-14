@@ -106,43 +106,27 @@ def get_product_buy_keyboard(plan_id):
     )
     return markup
 
-def get_payment_action_keyboard(txn_id):
-    markup = InlineKeyboardMarkup(row_width=1)
-    markup.add(
-        InlineKeyboardButton("✅ Check Payment Status", callback_data=f"chkpay_{txn_id}"),
-        InlineKeyboardButton("❌ Cancel Payment", callback_data="back")
-    )
-    return markup
-
 def get_admin_approval_keyboard(user_id, txn_id):
     markup = InlineKeyboardMarkup(row_width=2)
     markup.add(
         InlineKeyboardButton("✅ Verify Payment", callback_data=f"adm_approve_{user_id}_{txn_id}"),
         InlineKeyboardButton("❌ Cancel Payment", callback_data=f"adm_reject_{user_id}_{txn_id}")
-    )
-    return markup
-
-def get_media_object(f_path):
-    if os.path.exists(f_path):
-        if f_path.endswith(('.mp4', '.mkv', '.mov')):
-            return InputMediaVideo(open(f_path, 'rb'), supports_streaming=True)
-        elif f_path.endswith(('.jpg', '.jpeg', '.png')):
-            return InputMediaPhoto(open(f_path, 'rb'))
-    return None
-
-# ---------------------------------------------------------
-# START SEQUENCE & SECTION SENDER
-# ---------------------------------------------------------
-def send_start_sequence(chat_id, user_name):
+def send_start_sequence(chat_id, username):
     start_files = [
-        "videos/video2.mp5",
-        "videos/photo1.jpg",
-        "videos/video3.mp19",
-        "videos/video2.mp18",
-        "videos/video4.mp10"
+        'videos/video1.mp4',
+        'videos/photo1.jpg',
+        'videos/video2.mp4',
+        'videos/video3.mp4',
+        'videos/video4.mp4'
+    ]
+    
     album = []
     for f in start_files:
-        if len(album) > 0:
+        obj = get_media_object(f)
+        if obj:
+            album.append(obj)
+            
+    if len(album) > 0:
         try:
             bot.send_media_group(chat_id, album)
         except Exception as e:
@@ -152,11 +136,7 @@ def send_start_sequence(chat_id, user_name):
     bot.send_message(chat_id, quality_text, parse_mode="HTML")
 
     welcome_msg = f"{E_WAVE} Hello <b>{username}</b>!\n{E_DOWN} <i>Choose a plan to get started:</i>"
-    bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard(), parse_mode="HTML")Y** ✨"
-    bot.send_message(chat_id, quality_text)
-    
-    welcome_msg = f"👋 Hello, 🦋💸**{user_name}**!\n\nChoose a plan to get started:"
-    bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard())
+    bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard(), parse_mode="HTML")
 
 def send_section_content(chat_id, plan_id, plan_title, price, validity, desc, media_files):
     
