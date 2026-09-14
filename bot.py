@@ -69,10 +69,6 @@ def get_main_keyboard():
     
     def get_main_keyboard():
     markup = InlineKeyboardMarkup(row_width=1)
-    
-    # 1. URL Buttons -> Automatic Blue/Green Color (Arrow ↗ ke saath)
-    def get_main_keyboard():
-    markup = InlineKeyboardMarkup(row_width=1)
     markup.add(
         InlineKeyboardButton("🎬 WATCH DEMO VIDEO ↗", url="https://t.me/your_channel"),
         InlineKeyboardButton("💬 CONTACT ADMIN ↗", url="https://t.me/kushal_owner"),
@@ -84,7 +80,7 @@ def get_main_keyboard():
         InlineKeyboardButton("💎 ULTIMATE VIP PASS 💎", callback_data="p6")
     )
     markup.row(
-        InlineKeyboardButton("📖 How to Use", callback_data="how_to_use"),
+        InlineKeyboardButton("❓ How to Use", callback_data="how_to_use"),
         InlineKeyboardButton("🚨 Report Issue", callback_data="report_issue")
     )
     return markup
