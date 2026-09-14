@@ -142,20 +142,17 @@ def send_start_sequence(chat_id, user_name):
         "videos/video4.mp10"
     album = []
     for f in start_files:
-        obj = get_media_object(f)
-        if obj:
-            album.append(obj)
-
-    if len(album) > 0:
+        if len(album) > 0:
         try:
             bot.send_media_group(chat_id, album)
         except Exception as e:
             logging.error(f"Start Media Group Error: {e}")
 
     quality_text = f"{E_SPARKLE} <b>TRY OUR FAST PLAN FOR CHECKING THE QUALITY!</b> {E_SPARKLE}"
-    bot.send_message(chat_id, quality_text, parse_mode="HTML") Group Error: {e}")
+    bot.send_message(chat_id, quality_text, parse_mode="HTML")
 
-    quality_text = "✨ **TRY OUR ANY PLAN FOR CHECKING THE QUALITY** ✨"
+    welcome_msg = f"{E_WAVE} Hello <b>{username}</b>!\n{E_DOWN} <i>Choose a plan to get started:</i>"
+    bot.send_message(chat_id, welcome_msg, reply_markup=get_main_keyboard(), parse_mode="HTML")Y** ✨"
     bot.send_message(chat_id, quality_text)
     
     welcome_msg = f"👋 Hello, 🦋💸**{user_name}**!\n\nChoose a plan to get started:"
