@@ -13,7 +13,24 @@ from telebot.types import (
     InputMediaVideo, 
     InputMediaPhoto
 )
-
+# ==========================================
+# TELEGRAM PREMIUM CUSTOM EMOJIS (COPY-PASTE READY)
+# ==========================================
+E_CROWN   = '<tg-emoji emoji-id="5373070701407312154">👑</tg-emoji>'
+E_FIRE    = '<tg-emoji emoji-id="5373030206844994273">🔥</tg-emoji>'
+E_STAR    = '<tg-emoji emoji-id="5372996255145337298">⭐</tg-emoji>'
+E_SPARKLE = '<tg-emoji emoji-id="5373070701407312154">✨</tg-emoji>'
+E_ROCKET  = '<tg-emoji emoji-id="5373062319795495574">🚀</tg-emoji>'
+E_LIGHT   = '<tg-emoji emoji-id="5373042129942636402">⚡</tg-emoji>'
+E_GEM     = '<tg-emoji emoji-id="5427185078980288846">💎</tg-emoji>'
+E_MONEY   = '<tg-emoji emoji-id="5427179044568015509">💰</tg-emoji>'
+E_CARD    = '<tg-emoji emoji-id="5463162795802189689">💳</tg-emoji>'
+E_TICK    = '<tg-emoji emoji-id="5429402505508003195">✅</tg-emoji>'
+E_TIME    = '<tg-emoji emoji-id="5427186835621912952">⏳</tg-emoji>'
+E_ARROW   = '<tg-emoji emoji-id="5427181312310748440">👉</tg-emoji>'
+E_DOWN    = '<tg-emoji emoji-id="5427196022557008740">👇</tg-emoji>'
+E_WAVE    = '<tg-emoji emoji-id="5427192341803588998">👋</tg-emoji>'
+# ==========================================
 logging.basicConfig(level=logging.INFO)
 
 # ---------------------------------------------------------
